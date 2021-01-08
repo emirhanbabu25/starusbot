@@ -1,9 +1,9 @@
-const config = require("./config.json");
+const ayarlar = require("./ayarlar.json");
 const Discord = require("discord.js");
 
-const adamlik = new Discord.ShardingManager("./index2rtf.js", {
-  totalShards: 3, // shard sayısı ya da auto yazılabilir
-  token: config.token // token
+const adamlik = new Discord.ShardingManager("./bot.js", {
+  totalShards: 2, // shard sayısı ya da auto yazılabilir
+  token: ayarlar.token // token
 });
 
 adamlik.spawn(); // bullshit
